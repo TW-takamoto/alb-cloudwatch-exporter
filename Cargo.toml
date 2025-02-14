@@ -1,0 +1,19 @@
+[package]
+name = "alb-cloudwatch-exporter"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+lambda_runtime = "0.13.0"
+aws-config = "1.5.16"
+aws-sdk-s3 = "1.74.0"
+aws-sdk-cloudwatch = "1.64.0"
+aws-sdk-cloudwatchlogs = "1.64.0"
+aws_lambda_events = { version = "0.16.0", default-features = false, features = ["s3"] }
+tokio = { version = "1.36.0", features = ["rt", "macros", "sync"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+chrono = "0.4"
+flate2 = "1.0"
